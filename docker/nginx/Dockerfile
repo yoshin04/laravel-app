@@ -1,3 +1,4 @@
-FROM nginx:1.15.6
-VOLUME ./docker/web/default.conf:/etc/nginx/conf.d/default.conf
-VOLUME .:/var/www/src
+FROM nginx:1.17-alpine
+EXPOSE 80
+VOLUME ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
+VOLUME .:/var/www/html

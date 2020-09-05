@@ -8,4 +8,4 @@ zip \
 unzip \
 vim
 WORKDIR /var/www/src
-RUN composer update
+VOLUME .:/var/www/src
