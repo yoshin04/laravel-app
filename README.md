@@ -1,14 +1,14 @@
 1. リポジトリをクローンする  
-git clone <リポジトリ名>  
+`git clone <リポジトリ名>`  
 
 2. 生成されたディレクトリに移動する  
-cd laravel-app  
+`cd laravel-app`  
 
 3. phpディレクトリのdocker imageの作成  
-docker image build -t <任意の名前> ./docker/php  
+`docker image build -t <任意の名前> ./docker/php`  
 
 4. phpコンテナの起動  
-docker run --name <任意の名前> -v <srcディレクトリのパス>:var/www/src -d <作成したphpのDockerimage>  
+    docker run --name <任意の名前> -v <srcディレクトリのパス>:var/www/src -d <作成したphpのDockerimage>  
 
 5. phpコンテナの中に入ってIPアドレスを調べる  
 docker exec -it <phpコンテナ名> bash  
@@ -35,7 +35,7 @@ docker exec -it <mysqlコンテナ> bash
 hostname -i  
 exit  
 
-10. phpコンテナに入ってlaravelの.envを編集する
+10. phpコンテナに入ってlaravelの.envを編集する  
 docker exec -it <phpコンテナ> bash  
 cd laravel-app  
 vi .env  
